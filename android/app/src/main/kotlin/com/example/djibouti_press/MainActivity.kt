@@ -1,4 +1,4 @@
-package com.elaser
+package malazhariy.elaser
 
 import io.flutter.embedding.android.FlutterActivity
 
