@@ -1,0 +1,20 @@
+{
+  "locale": "ar",
+  "app_name": "Djibouti Press",
+  "page_not_found": "الصفحة غير موجودة",
+  "try_again": "إعادة المحاولة",
+  "no_internet": "لا يوجد اتصال بالإنترنت",
+  "check_internet": "يرجى التحقق من اتصال الانترنت",
+  "error_occurred": "حدث خطأ",
+  "connection_timeout_error": "انتهت مهلة الاتصال بالخادم",
+  "send_timeout_error": "انتهت مهلة الإرسال للخادم",
+  "receive_timeout_error": "انتهت مهلة الاستقبال من الخادم",
+  "unexpected_error_occurred": "@:error_occurred غير متوقع",
+  "error_request_canceled": "تم إلغاء الطلب إلى الخادم",
+  "bad_certificate_error": "خطأ \"شهادة غير صالحة\"",
+  "connection_to_server_failed": "فشل الاتصال بالخادم",
+  "connection_failed_check_internet": "@:connection_to_server_failed، يرجى التحقق من الاتصال بالإنترنت ثم إعادة المحاولة.",
+  "failed_to_load_data": "فشل تحميل البيانات",
+  "failed_to_load_data_try_again": "@:failed_to_load_data، يرجى المحاولة مرة أخرى",
+  "this_field_required": "هذا الحقل مطلوب"
+}

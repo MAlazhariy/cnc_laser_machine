@@ -1,0 +1,20 @@
+{
+  "locale": "en",
+  "app_name": "Djibouti Press",
+  "page_not_found": "Page Not Found",
+  "try_again": "Try again",
+  "no_internet": "No Internet connection",
+  "check_internet": "Please check your Internet connection",
+  "error_occurred": "An error occurred",
+  "connection_timeout_error": "Connection timeout with server",
+  "send_timeout_error": "Send timeout with server",
+  "receive_timeout_error": "Receive timeout with server",
+  "unexpected_error_occurred": "Unexpected error occurred",
+  "error_request_canceled": "The request to the server was canceled",
+  "bad_certificate_error": "\"Invalid Certificate\" error",
+  "connection_to_server_failed": "Connection to server failed",
+  "connection_failed_check_internet": "@:connection_to_server_failed, please check your internet connection and try again.",
+  "failed_to_load_data": "Failed to load data",
+  "failed_to_load_data_try_again": "@:failed_to_load_data, please try again",
+  "this_field_required": "This field is required"
+}
