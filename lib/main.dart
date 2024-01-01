@@ -4,7 +4,6 @@ import 'package:elaser/provider/splash_provider.dart';
 import 'package:elaser/utils/languages.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:elaser/helper/router_helper.dart';
 import 'package:elaser/my_app.dart';
 import 'package:elaser/utils/di_container.dart';
 import 'package:provider/provider.dart';
@@ -14,9 +13,6 @@ Future<void> main() async {
 
   // localization
   await EasyLocalization.ensureInitialized();
-
-  // init routes
-  RouterHelper.init();
 
   // init singleton
   await Di.init();

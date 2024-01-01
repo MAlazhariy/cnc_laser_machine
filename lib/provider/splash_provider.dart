@@ -1,5 +1,4 @@
 
-import 'package:elaser/data/model/base/response_model.dart';
 import 'package:elaser/data/repository/splash_repo.dart';
 import 'package:flutter/material.dart';
 

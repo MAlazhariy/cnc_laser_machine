@@ -1,12 +1,13 @@
 import 'package:elaser/data/model/language_model.dart';
+import 'package:elaser/helper/navigation/push_and_finish.dart';
 import 'package:elaser/utils/languages.dart';
 import 'package:elaser/utils/resources/app_size.dart';
 import 'package:elaser/utils/resources/color_manager.dart';
 import 'package:elaser/utils/resources/app_text_styles.dart';
-import 'package:elaser/utils/routes.dart';
 import 'package:elaser/view/base/main_button.dart';
 import 'package:elaser/view/base/snk_bar.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:elaser/view/screens/dashboard/dashboard_screen.dart';
 import 'package:flutter/material.dart';
 
 class ChangeLanguageScreen extends StatefulWidget {
@@ -37,7 +38,7 @@ class _ChangeLanguageScreenState extends State<ChangeLanguageScreen> {
     await Language.changeLanguage(context, locale: Locale(_selectedLang!));
     if (!mounted) return;
     SnkBar.showSuccess(context, 'language_changed_success'.tr());
-    await Navigator.pushNamedAndRemoveUntil(context, Routes.getDashboardScreen(), (route) => false);
+    await pushAndFinish(context, const DashboardScreen());
   }
 
   @override

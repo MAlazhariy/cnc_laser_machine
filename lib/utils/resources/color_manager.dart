@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const kMainColor = Color(0xFF09AF27);
+const kMainColor = Colors.blueAccent;
 const kPrimarySemiLightColor = Color(0xFF76969A);
 const kPrimaryLightColor = Color(0xFFA1B5B7);
 const kCorrectAnswerColor = Colors.green;

@@ -3,11 +3,9 @@ import 'package:elaser/provider/splash_provider.dart';
 import 'package:elaser/utils/resources/app_size.dart';
 import 'package:elaser/utils/resources/app_text_styles.dart';
 import 'package:elaser/utils/resources/color_manager.dart';
-import 'package:elaser/utils/routes.dart';
 import 'package:elaser/view/base/alert_dialog.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:elaser/utils/resources/app_images.dart';
 import 'package:provider/provider.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -41,8 +39,6 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   Future<void> _onSuccessConfig() async {
-    late final String screenRoute;
-
     if (!mounted) return;
 
     // // set navigation route name
@@ -56,11 +52,10 @@ class _SplashScreenState extends State<SplashScreen> {
     // } else {
     //   screenRoute = Routes.getLoginScreen();
     // }
-      screenRoute = Routes.getDashboardScreen();
 
     await Future.delayed(const Duration(milliseconds: 400));
     if (!mounted) return;
-    Navigator.pushNamedAndRemoveUntil(context, screenRoute, (route) => false);
+    // TODO: Go to screen
   }
 
   void _onFailedConfig(BuildContext context, String errorMsg) {
@@ -105,23 +100,8 @@ class _SplashScreenState extends State<SplashScreen> {
           child: Column(
             children: [
               const Spacer(),
-              // logo
-              Container(
-                alignment: Alignment.center,
-                // height: AppSize.s40,
-                margin: const EdgeInsets.symmetric(
-                  horizontal: AppSize.paddingDefault,
-                  vertical: AppSize.paddingSmall,
-                ),
-                child: const Image(
-                  image: AssetImage(
-                    AppImages.logo,
-                  ),
-                  fit: BoxFit.contain,
-                ),
-              ),
               Text(
-                'مارد',
+                'E-Laser',
                 style: kExtraBoldFontStyle.copyWith(
                   fontSize: AppSize.fontExtraLarge-2,
                 ),
