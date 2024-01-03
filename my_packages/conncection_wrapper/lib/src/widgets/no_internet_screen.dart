@@ -5,6 +5,7 @@ import 'package:connection_wrapper/src/models/disconnection_oprions_model.dart';
 import 'package:connection_wrapper/src/providers/internet_provider_provider.dart';
 import 'package:connection_wrapper/src/utils/constants.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -22,7 +23,7 @@ class NoInternetScreen extends StatefulWidget {
 
 class _NoInternetScreenState extends State<NoInternetScreen> {
   // check internet connection every minute until connected to the internet
-  late final _checkInternetStreamPeriodic = Stream.periodic(widget.customOptions?.checkInternetPeriodic ?? const Duration(minutes: 2), (count) async {
+  late final _checkInternetStreamPeriodic = Stream.periodic(widget.customOptions?.checkInternetPeriodic ?? const Duration(minutes: 1), (count) async {
     debugPrint('$count');
     return await Provider.of<InternetProvider>(context, listen: false).checkConnection();
   });
@@ -80,7 +81,7 @@ class _NoInternetScreenState extends State<NoInternetScreen> {
             const SizedBox(width: 8),
             Expanded(
               child: Text(
-                widget.customOptions?.title ?? Constants.disconnectionOptions.title ?? Constants.defaultTitle,
+                  'no_internet'.tr(),
                 style: Theme.of(context).textTheme.titleMedium?.copyWith(
                   color: textColor,
                   fontWeight: FontWeight.bold,
@@ -114,7 +115,7 @@ class _NoInternetScreenState extends State<NoInternetScreen> {
                           await _onPressed();
                         },
                         child: Text(
-                          widget.customOptions?.tryAgain ?? Constants.disconnectionOptions.tryAgain ?? Constants.defaultTryAgain,
+                            'try_again'.tr(),
                           style: Theme.of(context).textTheme.titleMedium?.copyWith(
                             color: textColor,
                           ),

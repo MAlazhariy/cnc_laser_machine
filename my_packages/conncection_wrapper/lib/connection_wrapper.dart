@@ -8,6 +8,7 @@ import 'src/providers/internet_provider_provider.dart';
 
 export 'src/widgets/connection_wrapper_widget.dart';
 export 'src/models/disconnection_oprions_model.dart';
+export 'src/helper/connection_helper.dart';
 
 class ConnectionWrapper extends StatelessWidget {
   const ConnectionWrapper.init({
