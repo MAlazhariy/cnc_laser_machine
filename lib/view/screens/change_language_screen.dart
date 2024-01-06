@@ -7,7 +7,7 @@ import 'package:elaser/utils/resources/app_text_styles.dart';
 import 'package:elaser/view/base/main_button.dart';
 import 'package:elaser/view/base/snk_bar.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:elaser/view/screens/dashboard/dashboard_screen.dart';
+import 'package:elaser/view/screens/dashboard_screen.dart';
 import 'package:flutter/material.dart';
 
 class ChangeLanguageScreen extends StatefulWidget {

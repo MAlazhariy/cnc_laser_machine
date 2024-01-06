@@ -16,5 +16,7 @@
   "connection_failed_check_internet": "@:connection_to_server_failed, please check your internet connection and try again.",
   "failed_to_load_data": "Failed to load data",
   "failed_to_load_data_try_again": "@:failed_to_load_data, please try again",
-  "this_field_required": "This field is required"
+  "this_field_required": "This field is required",
+  "save": "Save",
+  "settings": "Settings"
 }

@@ -16,6 +16,22 @@ class SplashRepo {
     return sharedPreferences.getBool(AppConstants.FIRST_OPEN) ?? true;
   }
 
+  String? getIpAddress (){
+    return sharedPreferences.getString(AppConstants.IP_ADDRESS);
+  }
+
+  String? getPort (){
+    return sharedPreferences.getString(AppConstants.PORT) ?? AppConstants.defaultGRBLPort;
+  }
+
+
+  Future<void> saveConfigData (String ipAddress, String port) async {
+    await Future.wait([
+      sharedPreferences.setString(AppConstants.IP_ADDRESS, ipAddress),
+      sharedPreferences.setString(AppConstants.PORT, port),
+    ]);
+  }
+
 //   Future<ApiResponse> getConfig({
 //     bool user = false,
 //     bool countries = false,
@@ -41,8 +57,4 @@ class SplashRepo {
 //       return ApiResponse.withError(ApiErrorHandler.handle(e));
 //     }
 //   }
-
-  Future<bool> setIsAppFirstOpen([bool value = false]) async {
-    return await sharedPreferences.setBool(AppConstants.FIRST_OPEN, value);
-  }
 }
