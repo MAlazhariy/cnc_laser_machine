@@ -14,7 +14,6 @@ class AppConstants {
   // shared preferences keys
   static const String IP_ADDRESS = "ip_address";
   static const String PORT = "port";
-  static const String FIRST_OPEN = 'first_open';
 
   // Strings
 }

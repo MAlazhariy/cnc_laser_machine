@@ -12,10 +12,6 @@ class SplashRepo {
   final SharedPreferences sharedPreferences;
   final DioClient dioClient;
 
-  bool isFirstOpen() {
-    return sharedPreferences.getBool(AppConstants.FIRST_OPEN) ?? true;
-  }
-
   String? getIpAddress (){
     return sharedPreferences.getString(AppConstants.IP_ADDRESS);
   }

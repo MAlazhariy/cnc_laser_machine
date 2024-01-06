@@ -25,6 +25,12 @@
   "next": "Next",
   "conversion": "Conversion",
   "convert_picture": "Convert Picture",
-  "convert_picture_description": "After converting the image and downloading the final file to your device, click “Next”",
-  "print": "Print"
+  "convert_picture_description": "Follow these steps to convert the image into a printable file:\n1. Click the “Convert Image” button to open the website.\n2. Click “Choose File” at the top left of the screen.\n3. After uploading the image, click the “Upload” button.\n4. After uploading the image, click on “Generate grcl gcode” on the right part of the page.\n5. After converting the image, click the “Download gcode” button to download the file to your device.\n6. Make sure the download is finished, then close the page and return back to the application to complete the rest of the steps.",
+  "print": "Print",
+  "laser_engraving": "Laser engraving",
+  "pick_file": "Pick the file",
+  "pick_file_description": "Select the file from your device (make sure the file is in \"ngc\" or \"gcode\" format).",
+  "invalid_picked_file": "Invalid picked file!",
+  "success_picked_file": "File picked successfully",
+  "send_engraving_command": "Submit engraving command"
 }

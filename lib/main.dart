@@ -1,6 +1,7 @@
 
 import 'package:connection_wrapper/connection_wrapper.dart';
 import 'package:elaser/provider/dashboard_provider.dart';
+import 'package:elaser/provider/laser_provider.dart';
 import 'package:elaser/provider/splash_provider.dart';
 import 'package:elaser/utils/languages.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -23,6 +24,7 @@ Future<void> main() async {
       providers: [
         ChangeNotifierProvider(create: (context) => Di.sl<SplashProvider>()),
         ChangeNotifierProvider(create: (context) => Di.sl<DashboardProvider>()),
+        ChangeNotifierProvider(create: (context) => Di.sl<LaserProvider>()),
       ],
       child: EasyLocalization(
         supportedLocales: Language.locales,

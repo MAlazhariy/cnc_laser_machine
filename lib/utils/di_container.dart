@@ -1,7 +1,9 @@
 import 'dart:async';
 
+import 'package:elaser/data/repository/laser_repo.dart';
 import 'package:elaser/data/repository/splash_repo.dart';
 import 'package:elaser/provider/dashboard_provider.dart';
+import 'package:elaser/provider/laser_provider.dart';
 import 'package:elaser/provider/splash_provider.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
@@ -21,10 +23,12 @@ class Di {
 
     // Repositories
     sl.registerLazySingleton(() => SplashRepo(sharedPreferences: sl(), dioClient: sl()));
+    sl.registerLazySingleton(() => LaserRepo(sl()));
 
     // Providers
     sl.registerFactory(() => SplashProvider(splashRepo: sl()));
     sl.registerFactory(() => DashboardProvider());
+    sl.registerFactory(() => LaserProvider(sl()));
 
     // External
     final sharedPreferences = await SharedPreferences.getInstance();

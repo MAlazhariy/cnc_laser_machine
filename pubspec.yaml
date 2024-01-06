@@ -21,6 +21,7 @@ dependencies:
     path: my_packages/conncection_wrapper
   webview_flutter: ^4.4.3
   fluttertoast: ^8.2.4
+  file_picker: ^6.1.1
 
 
 dev_dependencies:
