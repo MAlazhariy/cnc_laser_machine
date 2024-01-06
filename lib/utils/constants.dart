@@ -4,6 +4,7 @@ class AppConstants {
   // Global
   static const String appName = "E-laser";
   static const String defaultGRBLPort = "115200";
+  static const String convertPicSiteUrl = "https://tools.bytehamster.com/img2gco/index.php";
 
   // Uris
   static const String ROOT = '';

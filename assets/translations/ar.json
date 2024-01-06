@@ -18,5 +18,13 @@
   "failed_to_load_data_try_again": "@:failed_to_load_data، يرجى المحاولة مرة أخرى",
   "this_field_required": "هذا الحقل مطلوب",
   "save": "حفظ",
-  "settings": "الإعدادات"
+  "settings": "الإعدادات",
+  "connection_settings": "إعدادات الاتصال",
+  "check_settings": "تحقق من الإعدادات",
+  "check_settings_description": "1. تحقق من الاتصال بشبكة الواي فاي\n2. تحقق من إعدادات الاتصال بالماكينة (Ip address & Port)",
+  "next": "التالي",
+  "conversion": "التحويل",
+  "convert_picture": "تحويل الصورة",
+  "convert_picture_description": "بعد تحويل الصورة وتحميل الملف النهائي على جهازك، قم بالضغط على \"التالي\"",
+  "print": "طباعة"
 }

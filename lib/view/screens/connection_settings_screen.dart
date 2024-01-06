@@ -7,16 +7,27 @@ import 'package:elaser/view/screens/dashboard_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class SettingsScreen extends StatefulWidget {
-  const SettingsScreen({super.key});
+class ConnectionSettingsScreen extends StatefulWidget {
+  const ConnectionSettingsScreen({super.key});
 
   @override
-  State<SettingsScreen> createState() => _SettingsScreenState();
+  State<ConnectionSettingsScreen> createState() => _ConnectionSettingsScreenState();
 }
 
-class _SettingsScreenState extends State<SettingsScreen> {
-  TextEditingController ipAddressController = TextEditingController();
-  TextEditingController portController = TextEditingController();
+class _ConnectionSettingsScreenState extends State<ConnectionSettingsScreen> {
+  final ipAddressController = TextEditingController();
+  final portController = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      ipAddressController.text = Provider.of<SplashProvider>(context, listen: false).ipAddress ?? '';
+      portController.text = Provider.of<SplashProvider>(context, listen: false).port ?? '';
+      setState(() {});
+    });
+  }
 
   void _saveSettings() async {
     String ipAddress = ipAddressController.text;
@@ -35,21 +46,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
   }
 
   bool get isDataChanged {
-    final ipAddress = ipAddressController.text.isNotEmpty
-        ? ipAddressController.text
-        : Provider.of<SplashProvider>(context, listen: false).ipAddress;
-    final port = portController.text.isNotEmpty
-        ? portController.text
-        : Provider.of<SplashProvider>(context, listen: false).port;
-
-    return ipAddress?.isNotEmpty == true && port?.isNotEmpty == true;
-}
+    return portController.text.isNotEmpty && portController.text.isNotEmpty;
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('settings'.tr()),
+        title: Text('connection_settings'.tr()),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -59,20 +63,20 @@ class _SettingsScreenState extends State<SettingsScreen> {
             const Text('IP Address', style: kBoldFontStyle),
             TextField(
               controller: ipAddressController,
-              decoration: InputDecoration(hintText: Provider.of<SplashProvider>(context, listen: false).ipAddress ?? 'Enter IP Address'),
+              decoration: const InputDecoration(hintText: 'Enter IP Address'),
               keyboardType: TextInputType.number,
               onChanged: (_) {
-                setState(() { });
+                setState(() {});
               },
             ),
             const SizedBox(height: 16.0),
             const Text('Port', style: kBoldFontStyle),
             TextField(
               controller: portController,
-              decoration: InputDecoration(hintText: Provider.of<SplashProvider>(context, listen: false).port ?? "Enter Port"),
+              decoration: const InputDecoration(hintText: "Enter Port"),
               keyboardType: TextInputType.number,
               onChanged: (_) {
-                setState(() { });
+                setState(() {});
               },
             ),
             const SizedBox(height: 32.0),

@@ -19,6 +19,8 @@ dependencies:
   url_launcher: ^6.2.2
   connection_wrapper:
     path: my_packages/conncection_wrapper
+  webview_flutter: ^4.4.3
+  fluttertoast: ^8.2.4
 
 
 dev_dependencies:

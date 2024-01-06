@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:elaser/data/repository/splash_repo.dart';
+import 'package:elaser/provider/dashboard_provider.dart';
 import 'package:elaser/provider/splash_provider.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
@@ -23,6 +24,7 @@ class Di {
 
     // Providers
     sl.registerFactory(() => SplashProvider(splashRepo: sl()));
+    sl.registerFactory(() => DashboardProvider());
 
     // External
     final sharedPreferences = await SharedPreferences.getInstance();

@@ -5,7 +5,7 @@ import 'package:elaser/utils/resources/app_size.dart';
 import 'package:elaser/utils/resources/app_text_styles.dart';
 import 'package:elaser/utils/resources/color_manager.dart';
 import 'package:elaser/view/screens/dashboard_screen.dart';
-import 'package:elaser/view/screens/settings_screen.dart';
+import 'package:elaser/view/screens/connection_settings_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -35,7 +35,7 @@ class _SplashScreenState extends State<SplashScreen> {
     if(hasData){
       pushAndFinish(context, const DashboardScreen());
     } else {
-      pushAndFinish(context, const SettingsScreen());
+      pushAndFinish(context, const ConnectionSettingsScreen());
     }
   }
 

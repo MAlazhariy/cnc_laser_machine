@@ -18,5 +18,13 @@
   "failed_to_load_data_try_again": "@:failed_to_load_data, please try again",
   "this_field_required": "This field is required",
   "save": "Save",
-  "settings": "Settings"
+  "settings": "Settings",
+  "connection_settings": "Connection Settings",
+  "check_settings": "Check Settings",
+  "check_settings_description": "1. Check is connected to the Wi-Fi network properly\n2. Check the machine's connection settings (IP address & Port)",
+  "next": "Next",
+  "conversion": "Conversion",
+  "convert_picture": "Convert Picture",
+  "convert_picture_description": "After converting the image and downloading the final file to your device, click “Next”",
+  "print": "Print"
 }
