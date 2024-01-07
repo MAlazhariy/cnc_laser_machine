@@ -25,7 +25,7 @@ class LaserProvider extends ChangeNotifier {
   Socket? _socket;
 
   bool get connectedToMachine => _connectedToMachine;
-  final StreamController<double> _progressController = StreamController<double>();
+  final StreamController<double> _progressController = StreamController<double>.broadcast();
 
   Stream<double> get progressStream => _progressController.stream;
 

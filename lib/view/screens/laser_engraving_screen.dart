@@ -1,5 +1,4 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:elaser/provider/dashboard_provider.dart';
 import 'package:elaser/provider/laser_provider.dart';
 import 'package:elaser/provider/splash_provider.dart';
 import 'package:elaser/utils/resources/app_text_styles.dart';
@@ -19,6 +18,8 @@ class LaserEngraving extends StatefulWidget {
 }
 
 class _LaserEngravingState extends State<LaserEngraving> {
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -70,7 +71,7 @@ class _LaserEngravingState extends State<LaserEngraving> {
                   const SizedBox(height: 12),
                   MainButton(
                     title: 'send_engraving_command'.tr(),
-                    color: Colors.redAccent,
+                    color: laserProvider.connectedToMachine ? Colors.redAccent : kMainColor,
                     onPressed: laserProvider.isLoading
                         ? () async {
                             await laserProvider.cancelConnection();
