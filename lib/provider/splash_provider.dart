@@ -36,7 +36,7 @@ class SplashProvider extends ChangeNotifier {
     _isLoading = true;
     notifyListeners();
 
-    _ipAddress = _ipAddress;
+    _ipAddress = ipAddress;
     _port = port;
 
     await splashRepo.saveConfigData(ipAddress, port);

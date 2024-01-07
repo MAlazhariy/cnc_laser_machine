@@ -36,8 +36,8 @@ class _CheckConfigScreenState extends State<CheckConfigScreen> {
               const Divider(),
               const SizedBox(height: 12),
               Text(
-                'IP Address: ${Provider.of<SplashProvider>(context, listen: false).ipAddress ?? '?'}\n'
-                'Port: ${Provider.of<SplashProvider>(context, listen: false).port ?? '?'}',
+                'IP Address: ${Provider.of<SplashProvider>(context, listen: true).ipAddress ?? '?'}\n'
+                'Port: ${Provider.of<SplashProvider>(context, listen: true).port ?? '?'}',
                 style: kMediumFontStyle,
                 textAlign: TextAlign.left,
               ),
