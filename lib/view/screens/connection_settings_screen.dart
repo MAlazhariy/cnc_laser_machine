@@ -5,6 +5,7 @@ import 'package:elaser/utils/resources/app_text_styles.dart';
 import 'package:elaser/view/base/main_button.dart';
 import 'package:elaser/view/screens/dashboard_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 class ConnectionSettingsScreen extends StatefulWidget {
@@ -65,6 +66,10 @@ class _ConnectionSettingsScreenState extends State<ConnectionSettingsScreen> {
               controller: ipAddressController,
               decoration: const InputDecoration(hintText: 'Enter IP Address'),
               keyboardType: TextInputType.number,
+              inputFormatters: [
+                // FilteringTextInputFormatter.allow(RegExp(r'^([0-9]{1,3}\.){0,3}[0-9]{0,3}$')),
+                FilteringTextInputFormatter.deny(RegExp('[^0-9.]')), // Deny any character that is not a digit or dot
+              ],
               onChanged: (_) {
                 setState(() {});
               },
@@ -75,6 +80,9 @@ class _ConnectionSettingsScreenState extends State<ConnectionSettingsScreen> {
               controller: portController,
               decoration: const InputDecoration(hintText: "Enter Port"),
               keyboardType: TextInputType.number,
+              inputFormatters: [
+                FilteringTextInputFormatter.deny(RegExp('[^0-9]')),
+              ],
               onChanged: (_) {
                 setState(() {});
               },
