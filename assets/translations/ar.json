@@ -32,5 +32,7 @@
   "pick_file_description": "قم باختيار الملف من جهازك (تأكد أن الملف بصيغة \"ngc\" أو \"gcode\").",
   "invalid_picked_file": "الملف الذي تم اختياره غير صالح!",
   "success_picked_file": "تم اختيار الملف بنجاح",
-  "send_engraving_command": "إرسال أمر الحفر"
+  "send_engraving_command": "إرسال أمر الحفر",
+  "connected_to_machine": "متصل بجهاز الـ CNC",
+  "disconnected_to_machine": "غير متصل بجهاز الـ CNC"
 }

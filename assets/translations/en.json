@@ -32,5 +32,7 @@
   "pick_file_description": "Select the file from your device (make sure the file is in \"ngc\" or \"gcode\" format).",
   "invalid_picked_file": "Invalid picked file!",
   "success_picked_file": "File picked successfully",
-  "send_engraving_command": "Submit engraving command"
+  "send_engraving_command": "Submit engraving command",
+  "connected_to_machine": "Connected to the CNC machine",
+  "disconnected_to_machine": "Disconnected to the machine"
 }

@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:elaser/view/screens/check_config_screen.dart';
 import 'package:elaser/view/screens/convert_pic.dart';
-import 'package:elaser/view/screens/laser_engraving.dart';
+import 'package:elaser/view/screens/laser_engraving_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
