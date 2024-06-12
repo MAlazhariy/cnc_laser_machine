@@ -34,5 +34,7 @@
   "success_picked_file": "File picked successfully",
   "send_engraving_command": "Submit engraving command",
   "connected_to_machine": "Connected to the CNC machine",
-  "disconnected_to_machine": "Disconnected to the machine"
+  "disconnected_to_machine": "Disconnected to the machine",
+  "sending_file_to_machine": "Sending the file to the machine..",
+  "file_sent": "File sent successfully"
 }

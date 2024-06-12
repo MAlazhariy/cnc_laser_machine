@@ -9,25 +9,28 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.6
-  easy_localization: ^3.0.3
-  dio: ^5.4.0
-  provider: ^6.1.1
-  get_it: ^7.6.4
+  cupertino_icons: ^1.0.8
+  easy_localization: ^3.0.7
+  dio: ^5.4.3+1
+  provider: ^6.1.2
+  get_it: ^7.7.0
   salomon_bottom_bar: ^3.3.2
-  shared_preferences: ^2.2.2
-  url_launcher: ^6.2.2
+  shared_preferences: ^2.2.3
+  url_launcher: ^6.3.0
   connection_wrapper:
     path: my_packages/conncection_wrapper
-  webview_flutter: ^4.4.3
-  fluttertoast: ^8.2.4
-  file_picker: ^6.1.1
+  webview_flutter: ^4.8.0
+  fluttertoast: ^8.2.6
+  file_picker: ^8.0.4
+  firebase_core: ^3.1.0
+  firebase_storage: ^12.0.1
+  cloud_firestore: ^5.0.1
 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.1
+  flutter_lints: ^4.0.0
 
 flutter:
   uses-material-design: true

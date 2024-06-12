@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "638643236027",
+    "project_id": "e-laser",
+    "storage_bucket": "e-laser.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:638643236027:android:1648431b6c185bd88ecd9e",
+        "android_client_info": {
+          "package_name": "malazhariy.elaser"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8N49HyLfg7fXewx_U_Q_83o7JijgkF6Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

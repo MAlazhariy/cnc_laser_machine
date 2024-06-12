@@ -4,8 +4,8 @@ import 'package:elaser/provider/splash_provider.dart';
 import 'package:elaser/utils/resources/app_size.dart';
 import 'package:elaser/utils/resources/app_text_styles.dart';
 import 'package:elaser/utils/resources/color_manager.dart';
+import 'package:elaser/view/screens/convert_pic.dart';
 import 'package:elaser/view/screens/dashboard_screen.dart';
-import 'package:elaser/view/screens/connection_settings_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -17,7 +17,6 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-
   @override
   void initState() {
     super.initState();
@@ -28,15 +27,16 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   Future<void> initData() async {
+    await Future.delayed(const Duration(milliseconds: 450));
     if (!mounted) return;
-    final hasData = Provider.of<SplashProvider>(context, listen: false).getConfig();
-    await Future.delayed(const Duration(seconds: 1));
-    if (!mounted) return;
-    if(hasData){
-      pushAndFinish(context, const DashboardScreen());
-    } else {
-      pushAndFinish(context, const ConnectionSettingsScreen());
-    }
+    // pushAndFinish(context, const DashboardScreen());
+    pushAndFinish(context, const ConvertPicWebViewScreen());
+    // final hasData = Provider.of<SplashProvider>(context, listen: false).getConfig();
+    // if (!mounted) return;
+    // if(hasData){
+    // } else {
+    //   pushAndFinish(context, const ConnectionSettingsScreen());
+    // }
   }
 
   @override
@@ -63,7 +63,7 @@ class _SplashScreenState extends State<SplashScreen> {
               Text(
                 'E-Laser',
                 style: kExtraBoldFontStyle.copyWith(
-                  fontSize: AppSize.fontExtraLarge +10,
+                  fontSize: AppSize.fontExtraLarge + 10,
                   color: Colors.white,
                 ),
               ),

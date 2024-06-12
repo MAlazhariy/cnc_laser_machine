@@ -7,7 +7,7 @@ class AppConstants {
   static const String convertPicSiteUrl = "https://tools.bytehamster.com/img2gco/index.php";
 
   // Uris
-  static const String ROOT = '';
+  static const String ROOT = 'https://example.com';
   static const String BASE_URL = '$ROOT/api';
 
 

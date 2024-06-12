@@ -20,7 +20,7 @@ class _CheckConfigScreenState extends State<CheckConfigScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('check_settings'.tr()),
+        title: Text('connection_settings'.tr()),
       ),
       body: Center(
         child: Padding(

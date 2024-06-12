@@ -34,5 +34,7 @@
   "success_picked_file": "تم اختيار الملف بنجاح",
   "send_engraving_command": "إرسال أمر الحفر",
   "connected_to_machine": "متصل بجهاز الـ CNC",
-  "disconnected_to_machine": "غير متصل بجهاز الـ CNC"
+  "disconnected_to_machine": "غير متصل بجهاز الـ CNC",
+  "sending_file_to_machine": "..جاري ارسال الملف إلى الماكينة",
+  "file_sent": "تم إرسال الملف"
 }
